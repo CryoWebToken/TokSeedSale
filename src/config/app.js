@@ -2,7 +2,7 @@ export default {
     
     appName: "Cryo Fuel",
     
-    presaleEndDate: "Sep 30, 2021",
+    presaleEndDate: "Jul 14, 2021",
 
     pricePerAirdropInBNB: 0.002,
 
@@ -18,7 +18,7 @@ export default {
     defaultReferralAddres: "0x7c588a10a4f0C39b71e92cf10f276914728e9E1A",
 
     // contract address
-    contractAddress: "0xd5E653B1bFc4284A217fD12e631b0B0F8C6a910f",
+    contractAddress: "0xd6E52C8bD0278fa55255c1a5F67b022afbCA9d1b",
 
     //supportedChainId: 0x38 // 56 is Binance Smart chain
 
