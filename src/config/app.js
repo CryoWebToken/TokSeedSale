@@ -20,10 +20,10 @@ export default {
     // contract address
     contractAddress: "0xd6E52C8bD0278fa55255c1a5F67b022afbCA9d1b",
 
-    //supportedChainId: 0x38 // 56 is Binance Smart chain
+    supportedChainId: 0x38 // 56 is Binance Smart chain
 
     // comment this if not on testnet
-    supportedChainId: 0x61,//kovan for testing
+    //supportedChainId: 0x61,//kovan for testing
 
     publicRPC: "https://bsc-dataseed.binance.org/"
 
