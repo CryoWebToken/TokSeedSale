@@ -27,7 +27,9 @@
                     <div class="hero-content">
                         <h1 class="hero__title font-w--600 mb-2 mb-lg-3">NFT Based Utility Token for CryoWeb</h1>
                         <p class="hero__description text-color--200 font-size--20 opacity--80 mb-3 mb-lg-5 mb-md-6">
-                            CryoFuel is the main utility token for paying for operations on the CryoWeb Dapp protocol
+                            CryoWebs token (CryoFuel) will be the currency that powers our end-user website CryoWeb.net. 
+                            This use case ready end user site will be a full featured php/mysql website that allows clients 
+                            to place a "Remembrance" profile of their passed loved ones on-line and on the block-chain (Binance Smart Chain).
                         </p>
 
                         <div class="button-group d-flex flex-column flex-sm-row align-items-center d-sm-inline-block">
@@ -47,7 +49,7 @@
                 <div class="col-12 col-md-1 pos-abs-md-vertical-center pos-right text-center  mr-md-3 mr-xl-2 z-index1">
                     <ul class="icon-group icon-group--vertical rounded--full justify-content-center mb-3 mb-md-10">
                         <li><a href="https://t.me/cryowebtoken" class="color--primary"><i class="fab fa-telegram-plane"></i></a></li>
-                        <li><a href="#" class="color--primary"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://twitter.com/CryoWebOfficial" class="color--primary"><i class="fab fa-twitter"></i></a></li>
                     </ul>
                 </div>
                 <!-- end of social icon -->
