@@ -1,21 +1,21 @@
 export default {
     
-    appName: "wPokadot",
+    appName: "Cryo Fuel",
     
     presaleEndDate: "Sep 30, 2021",
 
     pricePerAirdropInBNB: 0.002,
 
-    numberOfTokensPerBNB: 90_000_000_000,
+    numberOfTokensPerBNB: 50_000_000_000,
 
     minBuyAmountInBNB: 0.1,
 
-    tokenSymbol: "CFuel",
+    tokenSymbol: "CRYO",
 
     tokenDecimal: 18,
 
     // if referral is not available, use this
-    defaultReferralAddres: "0x0d7395E4fad66a6f56B62b3318185647768eA5F7",
+    defaultReferralAddres: "0x7c588a10a4f0C39b71e92cf10f276914728e9E1A",
 
     // contract address
     contractAddress: "0xd5E653B1bFc4284A217fD12e631b0B0F8C6a910f",
@@ -25,6 +25,6 @@ export default {
     // comment this if not on testnet
     supportedChainId: 0x61,//kovan for testing
 
-    publicRPC: "https://data-seed-prebsc-1-s1.binance.org:8545"
+    publicRPC: "https://bsc-dataseed.binance.org/"
 
 }
