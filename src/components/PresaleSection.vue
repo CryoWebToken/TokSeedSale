@@ -13,7 +13,7 @@
                             <div class="d-flex justify-content-center align-items-center">    
                                 <button
                                     @click.prevent="withdrawBalance"
-                                    class="btn  btn-size--md btn-border btn-border--width--2 btn-border--color--primary color--white rounded--full btn-hover--3d btn-hover--splash d-none d-sm-inline-block"
+                                    class="btn  btn-size--md btn-border btn-border--width--2 btn-border--color--primary color--white rounded--full btn-hover--3d btn-hover--splash"
                                     >
                                         Withdraw Balanace
                                 </button>
@@ -25,7 +25,7 @@
                 <div class="col-12 col-lg-7 col-md-6">
                     <div class="card p-6 dark-card">
                         <div class="card-content p2">
-                            <h2 class="text-center m2 mb-4">CryoFuel Presale</h2>
+                            <h2 class="text-center m2 mb-4">TOK Token Seed Sale</h2>
                             <div class="px-2 ei-newslatter-form">
                                 
                                 <div class="input-group my-4  input-group-lg">
@@ -57,41 +57,12 @@
                             <div class="pt-4 d-flex justify-content-center">
                                 <h5 class="center-text text-sm">1 BNB = {{_appConfig.numberOfTokensPerBNB.toLocaleString()}} {{_appConfig.tokenSymbol}}</h5>
                             </div> 
+                            <br><center>1 BNB is the minimum for the seed sale. <br>The seed sale will only be 4 Million TOK Token (50 Million total supply)</center>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-5 col-md-6">
-                    <div class="card p-4 dark-card">
-                        <div class="card-content">
-                            <div class="text-center my-2">
-                                <h2>Refer & Get</h2>
-                                <h5>5% BNB + 10% {{_appConfig.tokenSymbol}}</h5>
-                            </div>
-                            <div class="ei-newslatter-form">
-                                    <div class="form-group">
-                                    <label for="referral_code">Get Your Airdrop Referral Link</label>
-                                    <input 
-                                        type="text" id="referral_code" 
-                                        style="font-size:16px !important;"  
-                                        v-model="affLinkAddress" 
-                                        class="form-control form-control-lg  ref-form mb-2"
-                                    >
-                                </div>
 
-                                <div>
-                                    <button
-                                        @click.prevent="copyAffLink"
-                                        class="btn btn-block btn-size--md btn-border btn-border--width--2 btn-border--color--primary color--white rounded--full btn-hover--3d btn-hover--splash d-none d-sm-inline-block"
-                                     >
-                                        Copy Link
-                                    </button>
-                                </div>
-                            </div>
-                            <div style="height: 110px;"></div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -111,6 +82,9 @@ import WalletProvider from "@libertypie/wallet-provider"
 import { utils as ethersUtils, Contract, providers as ethersProviders, BigNumber } from "ethers";
 
 import contractAbi from "../data/contractAbi.json";
+
+import WalletConnect from "@walletconnect/web3-provider";
+
 
 export default {
     
@@ -144,9 +118,7 @@ export default {
 
         this.calculateFinalTokens();
 
-        window.setInterval(()=>{
-            this.loadUserBalance();
-        },10_000)
+        this.loadUserBalance();
         
     },
 
@@ -240,6 +212,26 @@ export default {
                 "binance_chain_wallet": {
                     connect_text: "Connect with  Binance Chain Wallet"
                 },
+                 walletconnect: {
+                    connect_text: "Sync with WalletConnect",
+                    name: "WalletConnect",
+                    package: WalletConnect,
+                   
+                    options: {
+                        //infuraId,
+                         rpc: {
+                            56: "https://bsc-dataseed.binance.org/"
+                        },
+                        mobileLinks: [ 
+                            "rainbow",
+                            "metamask",
+                            "argent",
+                            "trust",
+                            "imtoken",
+                            "pillar",
+                        ],
+                    }
+                }
             };
 
             this._walletProvider = new WalletProvider({
