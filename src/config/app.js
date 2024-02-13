@@ -10,7 +10,7 @@ export default {
 
     minBuyAmountInBNB: 0.1,
 
-    tokenSymbol: "CFuel",
+    tokenSymbol: "TOK",
 
     tokenDecimal: 18,
 
